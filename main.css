@@ -1,0 +1,165 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+
+    /* font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto; */
+}
+
+
+
+body {
+    background-image: url(https://img.freepik.com/free-vector/nice-restaurant-background-illustrated_52683-60544.jpg?w=1380&t=st=1722676218~exp=1722676818~hmac=6fcd09e37efd78f6453f6af2abad76e91a06681fdeb41697156d69a7cd6eaa7e);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(63, 189, 13);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: rgb(241, 237, 241);
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.logo {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar .bar {
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.action-btn {
+    background-color: rgb(21, 197, 209);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-btn:hover {
+    scale: 1.05;
+    color: #fff;
+
+}
+
+.action-btn:active {
+    scale: 0.95
+}
+
+
+
+.dropdown-menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.dropdown-menu .action-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+@media(max-width : 992px) {
+
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+
+    .navbar .bar {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+}
+
+
+@media(max-width : 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
